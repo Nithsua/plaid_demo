@@ -1,8 +1,24 @@
-# plaid_page
+# Plaid Demo
 
-A new Flutter project.
+A Sandboxed demo app which uses the [Plaid Link API](https://plaid.com/docs/link/) to authenticate user via their bank account
 
-## Getting Started
+## Build and Run
+
+Clone the repo  
+
+    git clone https://github.com/Nithsua/plaid_demo.git
+
+Create the .env file at the root of the project
+
+    CLIENT_ID='client_id'
+    SECRET='secret'
+
+Build and Run the application
+
+    flutter run --[release or profile or debug]
+
+
+## Getting Started with Flutter
 
 This project is a starting point for a Flutter application.
 
