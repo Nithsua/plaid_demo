@@ -5,6 +5,8 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:plaid_page/views/home_view.dart';
 
 void main() async {
+  // Setting the UI Style of the System Status Bar to light and dark background
+  // and foreground respectively
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarBrightness: Brightness.light,
     statusBarIconBrightness: Brightness.dark,

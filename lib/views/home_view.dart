@@ -24,6 +24,7 @@ class _HomeViewState extends State<HomeView> {
     PlaidLink.onExit(_onExitCallback);
   }
 
+  // Called on a successful event
   void _onSuccessCallback(String publicToken, LinkSuccessMetadata metadata) {
     setState(() {
       buttonText =
@@ -33,10 +34,12 @@ class _HomeViewState extends State<HomeView> {
     debugPrint("onSuccess: $publicToken, metadata: ${metadata.description()}");
   }
 
+  // Called during each event that happens in the webview
   void _onEventCallback(String event, LinkEventMetadata metadata) {
     debugPrint("onEvent: $event, metadata: ${metadata.description()}");
   }
 
+  // Callback invoked when the authentication process ends without completion
   void _onExitCallback(LinkError? error, LinkExitMetadata metadata) {
     debugPrint("onExit metadata: ${metadata.description()}");
 
@@ -47,6 +50,7 @@ class _HomeViewState extends State<HomeView> {
     }
   }
 
+  //Initiates a loding screen, fetches the temporary token and initiates plaid webview
   void _onClickRequestToLink() async {
     final token = PlaidServices.createPlaidToken();
     showDialog(
@@ -65,6 +69,7 @@ class _HomeViewState extends State<HomeView> {
     });
   }
 
+  // Called during onPressed event of the button and the account has been already linked
   void _onClickAlreadyLinked() {
     ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Account has been already linked')));
@@ -82,6 +87,7 @@ class _HomeViewState extends State<HomeView> {
                   isLinked ? _onClickAlreadyLinked : _onClickRequestToLink,
               child: Text(
                 buttonText,
+                textAlign: TextAlign.center,
               ),
             ),
           ),
