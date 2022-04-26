@@ -59,8 +59,7 @@ class _HomeViewState extends State<HomeView> {
       final _linkTokenConfiguration = LinkTokenConfiguration(token: value);
       PlaidLink.open(configuration: _linkTokenConfiguration);
     }, onError: (error, stackTrace) {
-      debugPrint(error);
-      debugPrintStack(stackTrace: stackTrace);
+      Navigator.pop(context);
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
           content: Text('Error processing request, try again later')));
     });

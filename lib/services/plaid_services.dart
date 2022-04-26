@@ -15,7 +15,7 @@ abstract class PlaidServices {
       body: jsonEncode({
         "client_id": dotenv.env['CLIENT_ID'],
         "secret": dotenv.env['SECRET'],
-        "client_name": "Plaid Test App",
+        "client_name": "Plaid Demo",
         "user": {
           "client_user_id": const Uuid().v4(),
         },

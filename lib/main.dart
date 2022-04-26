@@ -23,6 +23,8 @@ class App extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         fontFamily: 'Montserrat',
+        scaffoldBackgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.black),
