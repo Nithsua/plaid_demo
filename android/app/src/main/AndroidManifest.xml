@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.plaid_page">
+    package="io.nithsua.plaid_page">
    <application
-        android:label="plaid_page"
+        android:label="Plaid Demo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
